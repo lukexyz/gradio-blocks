@@ -3,3 +3,5 @@ nbdev
 gradio
 tqdm 
 toml
+fastcore
+rich

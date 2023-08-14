@@ -5,5 +5,4 @@ d = { 'settings': { 'branch': 'main',
                 'doc_host': 'https://lukexyz.github.io',
                 'git_url': 'https://github.com/lukexyz/gradio-blocks',
                 'lib_path': 'gradio_blocks'},
-  'syms': { 'gradio_blocks.charts': {'gradio_blocks.charts.get_sample': ('charts.html#get_sample', 'gradio_blocks/charts.py')},
-            'gradio_blocks.core': {'gradio_blocks.core.get_sample': ('core.html#get_sample', 'gradio_blocks/core.py')}}}
+  'syms': {'gradio_blocks.charts': {'gradio_blocks.charts.get_sample': ('charts.html#get_sample', 'gradio_blocks/charts.py')}}}
