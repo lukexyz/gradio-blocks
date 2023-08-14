@@ -1,0 +1,9 @@
+project:
+  output-dir: _docs
+
+website:
+  title: "gradio-blocks"
+  site-url: "https://lukexyz.github.io/gradio-blocks"
+  description: "Assortment of gradio features using nbdev and altair."
+  repo-branch: main
+  repo-url: "https://github.com/lukexyz/gradio-blocks"
