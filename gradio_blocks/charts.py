@@ -73,7 +73,7 @@ def create_sales_chart(data):
     ).properties(
         title='Monthly Sales Over Time',
         width=1000,
-        height=400
+        height=300
     )
 
     # Add text labels on top of the bars
