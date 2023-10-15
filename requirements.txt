@@ -1,6 +1,9 @@
 altair 
 nbdev
+pip install zmq
+pip install markupsafe==2.0.1
 gradio
+werkzeug==0.16.1 
 tqdm 
 toml
 fastcore
