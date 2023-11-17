@@ -7,8 +7,8 @@ Assortment of [gradio](https://gradio.app/) features using [nbdev](https://nbdev
 > git clone https://github.com/lukexyz/gradio-blocks.git
 > cd gradio-blocks
 
-> conda create -n gblocks python=3.11 pip jupyter
-> conda activate gblocks
+> conda create -n gradio python=3.11 pip jupyter
+> conda activate gradio
 > pip install -r requirements.txt
 ```
 
