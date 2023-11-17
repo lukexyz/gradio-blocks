@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!-- saved from url=(0136)https://gtm-orn.viatorinc.com/orion/iframe/react/gtm/New-Zealand/d24-ttd?containerId=GTM-PV8QB97&parentDomainUrl=https://www.viator.com/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>null</title><link data-chunk="GoogleTagManager" rel="stylesheet" href="./GoogleTagManager.b210cc44a65a448e.chunk.css"></head><body data-automation="page-GOOGLE_TAG_MANAGER"><div id="app"><script nonce="" async="" src="./gtm.js.download"></script><script nonce="">
+        window.dataLayer = window.dataLayer || [];
+
+        // Push data to GTM
+        function onMessageReceived(evt) {
+            var data = evt.data;
+            var message = data.message;
+            var gtmData = data.gtmData;
+            
+            if (
+                evt.origin === new URL('https://www.viator.com/').origin &&
+                evt.source === window.parent &&
+                message === 'gtm_data' && gtmData !== undefined
+            ) {
+                window.dataLayer.push(gtmData);
+                var isGTMConfig = gtmData.pageType !== undefined;
+                if (isGTMConfig) {
+                    // Load GTM script after receiving config
+                    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                        new Date().getTime(),event:'gtm.js'});let f=d.getElementsByTagName(s)[0],
+                        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                        '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+                        })(window,document,'script','dataLayer','GTM-PV8QB97');
+                }
+            }
+        }
+        window.addEventListener('message', onMessageReceived);
+        
+        // Inject the nonce token in all scripts created dynamically by GTM
+        function injectNonceToken(nonceToken) {
+           (function($document) {
+               let $document_createElementOriginal = $document.createElement;
+               $document.createElement = function() {
+                   let element = $document_createElementOriginal.apply($document, arguments);
+                   if (element.tagName === 'SCRIPT' || element.tagName === 'STYLE') {
+                       element.setAttribute('nonce', nonceToken);
+                   }
+                   return element;
+               }
+           })(document);
+        }
+        injectNonceToken("RHCR6ntc0kTSgDUP");
+
+        // Notify parent this GoogleTagManagerPage iframe has loaded
+        parent.postMessage('gtm_loaded', 'https://www.viator.com/');
+        </script><noscript> 
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PV8QB97"
+                    height="0" width="0" style="display:none;visibility:hidden">
+            </iframe></noscript><hc-track></hc-track><hc-chat style="display:none"></hc-chat><hc-help-shell is-visible-by-default="true" hide-launcher="true" data-automation="help-center-shell"></hc-help-shell></div></body></html>
