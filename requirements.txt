@@ -2,7 +2,7 @@ altair
 nbdev
 zmq
 markupsafe==2.0.1
-gradio
+gradio==4.4.1
 werkzeug==0.16.1 
 tqdm 
 toml

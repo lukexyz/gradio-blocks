@@ -1,31 +1,31 @@
-import numpy as np
 import gradio as gr
 from gradio import components
 
-def flip_text(x):
-    return x[::-1]
+def enhance_text(text1, text2):
+    return text1 + text2
 
-def flip_image(x):
-    return np.fliplr(x)
-
-with gr.Blocks() as demo:
-    gr.Markdown("Flip text or image files using this demo.")
-    with gr.Tab("Flip Text"):
-        text_input = gr.Textbox()
+with gr.Blocks() as interface:
+    gr.Markdown(f"Gradio demos using version {gr.__version__}")
+    with gr.Tab("Text Enhancer"):
+        text_input1 = gr.Textbox(label="Input 1")
+        text_input2 = gr.Textbox(label="Input 2")
         text_output = gr.Textbox()
-        text_button = gr.Button("Flip")
-    with gr.Tab("Flip Image"):
-        with gr.Row():
-            image_input = gr.Image()
-            image_output = gr.Image()
-        image_button = gr.Button("Flip")
 
-    with gr.Accordion("Open for More!"):
-        gr.Markdown("Look at me...")
+        text_input1.change(enhance_text, inputs=[text_input1, text_input2], outputs=text_output)
+        text_input2.change(enhance_text, inputs=[text_input1, text_input2], outputs=text_output)
 
-    text_button.click(flip_text, inputs=text_input, outputs=text_output)
-    image_button.click(flip_image, inputs=image_input, outputs=image_output)
+    with gr.Tab("Tab 2"):
+        with gr.Accordion("Open for more tab 2"):
+            gr.Markdown("coming soon...")
 
+    with gr.Tab("Tab 3"):
+        gr.Markdown("# Greetings from Gradio!")
+        inp = gr.Textbox(placeholder="What is your name?", label="inp")
+        out = gr.Textbox()
 
-demo.launch(share=False)
+        inp.change(fn=lambda x: f"Welcome, {x}!",
+                inputs=inp,
+                outputs=out)
 
+if __name__ == "__main__":
+    interface.launch()
