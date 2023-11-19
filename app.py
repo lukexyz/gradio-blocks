@@ -12,8 +12,8 @@ def mirror(x):
     return x
 
 with gr.Blocks() as demo:
-    gr.Markdown(f"🎨 Gradio demos with `gradio {gr.__version__}`")
-    with gr.Tab("📡 1. Event Listener"):
+    gr.Markdown(f" Gradio demos with `gradio {gr.__version__}`")
+    with gr.Tab(" 1.📡 Event Listener"):
         with gr.Row():
             with gr.Column():
                 text_input1 = gr.Textbox(label="text_input1")
@@ -25,7 +25,7 @@ with gr.Blocks() as demo:
                 text_input1.change(enhance_text, inputs=[text_input1, text_input2], outputs=text_output)
                 text_input2.change(enhance_text, inputs=[text_input1, text_input2], outputs=text_output)
 
-    with gr.Tab("🗂️ 2. Tab 2"):
+    with gr.Tab("2.🧮 Datatables"):
 
         txt = gr.Textbox(label="Input", lines=2)
         txt_2 = gr.Textbox(label="Input 2")
@@ -59,7 +59,7 @@ with gr.Blocks() as demo:
 
 
 
-    with gr.Tab("🧩 3. Tab 3"):
+    with gr.Tab("3. 🛸 Flip "):
         gr.Markdown("# Tab 3 features")
         inp = gr.Textbox(placeholder="What is your name?", label="inp")
         out = gr.Textbox()
@@ -69,4 +69,4 @@ with gr.Blocks() as demo:
                 outputs=out)
 
 if __name__ == "__main__":
-    demo.launch()
+    demo.launch(share=True,) #auth=("user", "pw"))
