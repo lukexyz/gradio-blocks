@@ -1,8 +1,17 @@
 import gradio as gr
-from hello_tab import hello_interface
-from bye_tab import bye_interface
+from hello_tab import hello_block
+from bye_tab import bye_block
 
-demo = gr.TabbedInterface([hello_interface, bye_interface], ["Hello World", "Bye World"])
+def main():
+    with gr.Blocks() as app:
+        gr.Markdown("### Multi-Tab Gradio App")
+        with gr.Tabs():
+            with gr.Tab("Hello World"):
+                hello_block()
+            with gr.Tab("Bye World"):
+                bye_block()
+
+    app.launch()
 
 if __name__ == "__main__":
-    demo.launch()
+    main()
